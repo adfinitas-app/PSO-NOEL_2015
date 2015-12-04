@@ -4147,6 +4147,10 @@ input:-moz-placeholder {
   position: absolute;
   top: 0;
   left: 0; }
+  @media screen and (min-width: 0em) and (max-width: 35.49306em) {
+    .anchor {
+      margin-top: -47px;
+      padding-bottom: 47px; } }
 
 @media screen and (min-width: 0em) and (max-width: 35.49306em) {
   h2 br, h3 br {

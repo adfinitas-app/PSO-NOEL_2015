@@ -18,6 +18,11 @@ input:-moz-placeholder { color:$primary-color; }
 	position: absolute;
 	top: 0;
 	left: 0;
+	
+	@include breakpoint(small only) {
+		margin-top: -47px;
+		padding-bottom: 47px;
+	}
 }
 
 
