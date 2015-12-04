@@ -4284,7 +4284,8 @@ input:-moz-placeholder {
       display: block;
       width: 50%;
       height: 100%;
-      background: #e01500; }
+      background: #e01500;
+      transition: all 0.3s ease; }
 
 .credits {
   font-size: 10px;
