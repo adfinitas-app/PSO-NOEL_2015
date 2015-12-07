@@ -134,7 +134,7 @@ input:-moz-placeholder { color:$primary-color; }
 		}
 
 		@include breakpoint(small only) {
-			bottom: 205px;
+			bottom: 145px;
 		} 
 	}
 
@@ -159,7 +159,7 @@ input:-moz-placeholder { color:$primary-color; }
 
 
 		@include breakpoint(small only) {
-			bottom: 245px;
+			bottom: 185px;
 		} 
 	}
 }
@@ -176,6 +176,7 @@ input:-moz-placeholder { color:$primary-color; }
 
 	@include breakpoint(small only) { 
 		text-align: center;
+		padding: 15px 0;
 	}
 
 	p {
@@ -184,7 +185,7 @@ input:-moz-placeholder { color:$primary-color; }
 		line-height: 1em;
 
 		@include breakpoint(small only) {
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 		} 
 	}
 
@@ -200,7 +201,7 @@ input:-moz-placeholder { color:$primary-color; }
 		width: 100%;
 
 		@include breakpoint(small only) {
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 		} 
 
 		.bar {
@@ -340,11 +341,29 @@ section {
 	} 
 }
 
+.section-case {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	
+	@include breakpoint(small only) {
+		height: auto !important;
+	}
+}
+
 // SECTION CASE FALSE
 .section-case-false {
 	color: #9f9f9f;
 	background: #252525;
 	font-size: 16px;
+
+	.init & {
+		height: 100%;
+	
+		@include breakpoint(small only) {
+			height: auto;
+		}
+	}
 
 	.title {
 		margin-bottom: 40px;
@@ -356,6 +375,8 @@ section {
 
 	em {
 		color: #FFF;
+		opacity: 0.8;
+		font-size: 13px;
 	}
 
 	strong {
@@ -371,6 +392,28 @@ section {
 // SECTION CASE TRUE
 .section-case-true {
 	color: #FFF;
+
+	.init & {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		transform: translate(50%, 0);
+	
+		@include breakpoint(small only) {
+			position: relative;
+			height: auto;
+			transform: translate(0, 0) !important;
+		}
+	}
+
+	.no-switch {
+		.sep {
+			display: none;
+		}
+	}
 	
 	@include breakpoint(small only) {
 		padding-bottom: 0;
@@ -379,6 +422,99 @@ section {
 		.columns:first-child {
 			padding-top: 20px;
 			position: relative;
+		}
+	}
+
+	.row {
+		height: 100%;
+
+		.columns {
+			height: 100%;
+		}
+	
+		@include breakpoint(small only) {
+			height: auto !important;
+
+			.columns {
+				height: auto !important;
+			}
+		}
+	}
+
+	.sep {
+		height: 100%;
+		width: 5px;
+		background: #FFF;
+		display: block;
+		position: absolute;
+		left: -2px;
+		top: 0;
+
+		a {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 25px;
+			height: 25px;
+
+			&:before {
+				content:'';
+				width: 100%;
+				display: block;
+				height: 100%;
+				background: #FFF;
+				transform: rotate(-45deg);				
+			}
+
+			span {
+				display: block;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 2px;
+					margin-top: -6px;
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 6px 6px 6px 0;
+					border-color: transparent #e32a15 transparent transparent;
+					transition: all 0.3s ease;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 2px;
+					margin-top: -6px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 6px 0 6px 6px;
+					border-color: transparent transparent transparent #e32a15;
+					transition: all 0.3s ease;
+				}
+			}
+
+			&:hover {
+				span {
+					&:before {
+						transform: translate( 2px, 0);
+					}
+					&:after {
+						transform: translate(-2px, 0);
+					}
+				}
+			}
 		}
 	}
 
@@ -441,9 +577,11 @@ section {
 		padding-top: 40px;
 		padding-bottom: 20px;
 		font-size: 14px;
+		height: calc( 100% + 80px ) !important;
 
 		@include breakpoint(small only) {
 			margin: 0;
+			height: auto !important;
 		}
 
 		h2 {
