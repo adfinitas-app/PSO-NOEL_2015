@@ -41,6 +41,13 @@ $(document).ready(function() {
             });
         }).trigger('resize');
 
+        $('.trigger-show-true').on('click', function(e) {
+            e.preventDefault();
+
+            var $parent = $(this).parents('.section-case');
+            TweenMax.to($parent.find('.section-case-true'), 0.3, { x : 0 });
+        });
+
         $('.section-case').find('.trigger-move').on('click', function(e) {
             e.preventDefault();
         }).on('mousedown touchstart', function(e) {
