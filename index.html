@@ -1,6 +1,40 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+      <!-- Start of Woopra Code -->
+<script>
+function extractUrlParams(){	
+    var t = document.location.search.substring(1).split('&'); var f = [];
+    for (var i=0; i<t.length; i++){
+        var x = t[ i ].split('=');
+        f[x[0]]=decodeURIComponent(x[1]);
+    }
+    return f;
+};
+
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'peuples-solidaires.org'
+});
+
+var p = extractUrlParams();
+
+if ('email' in p) {
+    if ('lastname' in p && 'firstname' in p) {
+        woopra.identify({
+            email: p['email'],
+            name: p['firstname'] + ' ' + p['lastname']
+        });
+    } else {woopra.identify({email: p['email']})}
+}
+
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +58,7 @@
                 <li class="menu-text">
                   <a href="http://www.peuples-solidaires.org/" target="_blank" class="logo"><img src="img/logo.png" alt="" /></a>
                 </li>
-                <li><a href="./#luttons-ensemble">LUTTONS ENSEMBLE</a></li>
+                <li><a href="./#luttons-ensemble">URGENCE CLIMAT</a></li>
                 <li><a href="./#accaparements">ACCAPAREMEnt</a></li>
                 <li><a href="./#agro-industrie">AGRO-INDUSTRIE</a></li>
                 <li><a href="./#pollution">FINANCEMENT</a></li>
@@ -79,7 +113,7 @@
 
             <p><strong>Il y a urgence !</strong> Sans limitation de la hausse de température à 2°C maximum, les effets seraient catastrophiques : le niveau de la mer pourrait s’élever de 1 mètre à l’horizon 2100, mettant en danger 400 millions d’habitant-e-s sur la planète.</p>
 
-            <p>30% de la biodiversité serait perdue avant 2100, privant 1/3 des espèces vivantes d’un environnement adapté à leur survie !</p>
+            <p>30% de la biodiversité seraient perdus avant 2100, privant 1/3 des espèces vivantes d’un environnement adapté à leur survie !</p>
 
             <p><strong>800 millions d’hommes, de femmes et d’enfants souffrent</strong> aujourd’hui de la faim dans le monde. Ils pourraient être 600 millions de plus en 2080 du fait des changements climatiques ! (source : PNUD)</p>
           </div>
@@ -131,7 +165,7 @@
 
               <h3>Et pourtant </h3>
 
-              <p><strong> Elles encouragent les accaparements de terres au lieu de « La NASAN encourage les accaparements de terres ! »</strong></p>
+              <p><strong> Elles encouragent les accaparements de terres</strong></p>
 
               <p>En échange de soutiens financiers, la NASAN engage les Etats africains à réaliser des réformes législatives (comme interdire l’échange de semences entre agriculteurs), fiscales et foncières, qui profitent aux grandes multinationales comme Monsanto ou Cargill.</p>
 
@@ -141,13 +175,13 @@
             <div class="columns small-12 medium-6">
               <p><strong>La NASAN encourage les accaparements de terres !</strong></p>
 
-              <p>La preuve en Tanzanie mais également au Nigéria où 350 000 hectares de terres ont été alloués à 8 entreprises de la Nouvelle Alliance. 3 seraient déjà impliquées dans des cas d’accaparements de terres.<br /><em>(Source : Peuples solidaires-ActionAid)</em></p>
+              <p>La preuve en Tanzanie mais également au Nigéria où 350 000 hectares de terres ont été alloués à 8 entreprises de la Nouvelle Alliance. 3 seraient déjà impliquées dans des cas d’accaparements de terres.<br /><em></em></p>
 
-              <p>Depuis 15 ans, des dizaines de millions d’hectares de terres ont été acquis par de grands investisseurs dans les pays du Sud.<br/><em>(Source : Peuples solidaires-ActionAid)</em></p>
+              <p>Depuis 15 ans, des dizaines de millions d’hectares de terres ont été acquis par de grands investisseurs dans les pays du Sud.<br/><em></em></p>
 
               <p><strong>Un modèle agricole non durable qui nuit aux populations !</strong></p>
 
-              <p>Les projets de la NASAN consomment beaucoup de terres, d’eau, d’engrais, de pesticides, de semences OGM. Ils ne respectent pas les droits des populations locales et ne permettent pas une gestion durable des ressources  naturelles. !</p>
+              <p>Les projets de la NASAN consomment beaucoup de terres, d’eau, d’engrais, de pesticides, de semences OGM. Ils ne respectent pas les droits des populations locales et ne permettent pas une gestion durable des ressources  naturelles !</p>
 
 
             </div>
@@ -273,7 +307,7 @@
 
               <p><strong>Nous soutenons d’autres projets similaires au Sénégal, au Ghana, au Bangladesh, au Sierra Leone, au Malawi, en Inde, au Vietnam, au Brésil ou encore au Kenya.</strong></p>
 
-              <p>Les petit-e-s paysan-ne-s s’adaptent aux changements climatiques, soutenons-les ! » dans la même typo que cas précédent pour la phrase :  « Les petit-e-s paysan-ne-s nourrissent le monde, soutenons-les !</p>
+              <p><h3>Les petit-e-s paysan-ne-s s’adaptent aux changements climatiques, soutenons-les ! </h3></p>
 
               <div class="text-center">
                 <a href="https://soutenir.peuples-solidaires.org/b?cid=101" target="_blank" class="button">Je fais un don</a>
@@ -291,7 +325,7 @@
           <span class="anchor" id="pollution"></span>
           <div class="row">
             <div class="columns">
-              <h3 class="title text-center">FAUSSE SOLUTION<br />REMETTRE EN CAUSE LA RESPONSABILITÉ <br />HISTORIQUE DES PAYS POLLEURS</h3>
+              <h3 class="title text-center">FAUSSE SOLUTION<br />REMETTRE EN CAUSE LA RESPONSABILITÉ <br />HISTORIQUE DES PAYS POLLUEURS</h3>
             </div>
           </div>
           <div class="row">
@@ -464,6 +498,25 @@
     <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="js/app.js"></script>
   
-  
+ <!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('7503-616-10-5856');/*]]>*/</script><noscript><a href="https://www.olark.com/site/7503-616-10-5856/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
   </body>
 </html>
