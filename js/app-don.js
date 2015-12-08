@@ -89,7 +89,7 @@ function getDonAmount() {
         data: {
             "user_api": "008",
             "pwd_api": "4hCVhv2H",
-            "campaigns[]": [102]
+            "campaigns[]": [101, 102]
         }
     }).done(function(data, status, jqXHR) {
         if (data[0] == '1') {
