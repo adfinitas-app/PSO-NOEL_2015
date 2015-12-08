@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+      <!-- Start of Woopra Code -->
+<script>
+function extractUrlParams(){	
+    var t = document.location.search.substring(1).split('&'); var f = [];
+    for (var i=0; i<t.length; i++){
+        var x = t[ i ].split('=');
+        f[x[0]]=decodeURIComponent(x[1]);
+    }
+    return f;
+};
+
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'peuples-solidaires.org'
+});
+
+var p = extractUrlParams();
+
+if ('email' in p) {
+    if ('lastname' in p && 'firstname' in p) {
+        woopra.identify({
+            email: p['email'],
+            name: p['firstname'] + ' ' + p['lastname']
+        });
+    } else {woopra.identify({email: p['email']})}
+}
+
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-39675391-1', 'auto');
+
+  ga('send', 'pageview');
+
+</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peuples solidaires | Les changements climatiques volent mon futur, on ne volera pas ma parole !</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,300,300italic,400italic,600|Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <header class="main-header sticky">
+      <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+
+      <div class="top-bar" id="example-menu">
+        <div class="row">
+          <div class="columns">
+            <div class="top-bar-left">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">
+                  <a href="http://www.peuples-solidaires.org/" target="_blank" class="logo"><img src="img/logo.png" alt="" /></a>
+                </li>
+                <li><a href="./#luttons-ensemble">URGENCE CLIMAT</a></li>
+                <li><a href="./#accaparements">ACCAPAREMEnt</a></li>
+                <li><a href="./#agro-industrie">AGRO-INDUSTRIE</a></li>
+                <li><a href="./#pollution">FINANCEMENT</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <a href="https://soutenir.peuples-solidaires.org/b?cid=101" target="_blank" class="button">Je fais un don</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="wrapper">
+      <section class="header-page">
+        <figure class="img"></figure>
+        <p class="credits">Photographe : Clèment Tardif/ActionAid</p>
+
+        <div class="txt">
+          <div class="row">
+            <div class="columns small-12 medium-offset-1 medium-10 large-offset-2 large-8 text-center">
+              <h2>Les changements climatiques volent mon futur, on ne volera pas ma parole !</h2>
+              <a href="#luttons-ensemble" class="link"><img src="img/arrow-down.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="progressbar-container">
+          <div class="row">
+            <div class="columns small-12 medium-2 align-bottom">
+              <p>Agissons <br />maintenant</p>
+            </div>
+            <div class="columns small-12 medium-8 text-center align-bottom">
+              <strong><span class="counter">3 000</span> € / 6 000 €</strong>
+              <div class="progressbar"><div class="bar"></div></div>
+            </div>
+            <div class="columns small-12 medium-2 align-bottom">
+              <a href="https://soutenir.peuples-solidaires.org/b/mon-don" target="_blank" class="button">Je fais un don</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <section class="section-luttons">
+        <span class="anchor" id="luttons-ensemble"></span>
+        <div class="row">
+          <div class="columns">
+            <h2>Luttons ensemble contre <br />les changements climatiques et la pauvreté !</h2>
+            <p><strong>La France accueille la 21e Conférence des Nations Unies</strong> sur le changement climatique (COP21).<br />Cette année <strong>du 30 novembre au 11 décembre</strong>, un accord universel et contraignant doit être adopté pour limiter les gaz à effet de serre et permettre le soutien à l’adaptation des pays du Sud affectés par les changements climatiques.</p>
+
+            <p><strong>Il y a urgence !</strong> Sans limitation de la hausse de température à 2°C maximum, les effets seraient catastrophiques : le niveau de la mer pourrait s’élever de 1 mètre à l’horizon 2100, mettant en danger 400 millions d’habitant-e-s sur la planète.</p>
+
+            <p>30% de la biodiversité seraient perdus avant 2100, privant 1/3 des espèces vivantes d’un environnement adapté à leur survie !</p>
+
+            <p><strong>800 millions d’hommes, de femmes et d’enfants souffrent</strong> aujourd’hui de la faim dans le monde. Ils pourraient être 600 millions de plus en 2080 du fait des changements climatiques ! <em style="font-size:13px">(source : PNUD)</em></p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-climat">
+        <div class="row">
+          <div class="columns small-12 large-10 large-offset-1 text-center">
+            <h2>Climat et pauvreté, même combat !</h2>
+            <p>A l’occasion de la COP21, Peuples Solidaires – ActionAid France se mobilise pour faire valoir un autre modèle de développement, respectueux des droits humains  et de l’environnement ! Malheureusement, la situation dramatique que connaît Paris ne permet pas à la société civile de se rassembler dans la rue.</p>
+            <p><strong>Pour autant nous continuons à nous mobiliser et à faire entendre notre voix face aux fausses solutions prônées par les  multinationales pour lutter contre le changement climatique.</strong></p>
+
+            <p class="credits">Photographe : Sam Phelps/ActionAid</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-case-studies">
+        <div class="row">
+          <div class="columns small-12 medium-6 text-center">
+            <h2>Fausses Solutions</h2>
+            <p><strong>LES MULTINATIONALES AVANCENT DE FAUSSES SOLUTIONS POUR MASQUER LEUR APPÉTIT DE POUVOIR ET DE PROFITS !</strong></p>
+          </div>
+          <div class="columns small-12 medium-6 text-center">
+            <h2>Vraies Solutions</h2>
+            <p><strong>AGISSEZ AVEC <br />PEUPLES SOLIDAIRES – ACTIONAID FRANCE<br />pour défendre de vraies alternatives face aux changements climatiques et à la pauvreté !</strong></p>
+          </div>
+
+          <a href="#accaparements"><img src="img/arrow-down-xs.svg" alt="" /></a>
+        </div>
+      </section>
+
+      <section class="section-case no-switch">
+        <section class="section-case-1 section-case-false">
+          <span class="anchor" id="accaparements"></span>
+          <div class="row">
+            <div class="columns">
+              <h3 class="title text-center">FAUSSE SOLUTION <br /><br />CONFIER LE DÉVELOPPEMENT DES PAYS <br />DU SUD AUX MULTINATIONALES !</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-6">
+              <!--<p><strong>ILS CONFIENT LE DÉVELOPPEMENT DES PAYS DU SUD AUX MULTINATIONALES !</strong></p>-->
+
+              <p>Lancée par le G7 en juin 2012, soutenue par la France, <br/>la Nouvelle alliance pour la sécurité alimentaire et la nutrition (NASAN) assure officiellement vouloir sortir de la pauvreté 50 millions de personnes en Afrique d’ici 2022 en favorisant l’apport de capitaux privés internationaux. </p>
+
+              <h3>Et pourtant </h3>
+
+        
+
+              <p>En échange de soutiens financiers, la NASAN engage les Etats africains à réaliser des réformes législatives (comme interdire l’échange de semences entre agriculteurs), fiscales et foncières, qui profitent aux grandes multinationales comme Monsanto ou Cargill.</p>
+
+              <a href="#" class="trigger-show-true">Voir la vraie solution </a>
+
+            </div>
+            <div class="columns small-12 medium-6">
+              <p><strong>Elles encouragent les accaparements de terres !</strong></p>
+
+              <p>La preuve en Tanzanie mais également au Nigéria où 350 000 hectares de terres ont été alloués à 8 entreprises de la Nouvelle Alliance. <br />3 seraient déjà impliquées dans des cas d’accaparements de terres.<br /><em></em></p>
+
+              <p>Depuis 15 ans, des dizaines de millions d’hectares de terres ont été acquis par de grands investisseurs dans les pays du Sud.<br/><em></em></p>
+
+              <p><strong>Un modèle agricole non durable qui nuit aux populations !</strong></p>
+
+              <p>Les projets de la NASAN consomment beaucoup de terres, d’eau, d’engrais, de pesticides, de semences OGM. Ils ne respectent pas les droits des populations locales et ne permettent pas une gestion durable des ressources  naturelles !</p>
+
+
+            </div>
+          </div>
+        </section>
+
+        <section class="section-case-1 section-case-true">
+          <div class="sep">
+            <a href="#" class="trigger-move"><span></span></a>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-5">
+              <figure></figure>
+              <h3>“ Cette terre est mon foyer ; elle représente tout pour moi.</h3>
+
+              <p class="quote">C’est ici que nous vivons, c’est ici que je sème mes cultures et que je garde mes bêtes. C’est tout ce que je possède. ”<em>Témoignage d’ANZA</em></p>
+
+              <div class="form">
+                <form>
+                  <label>Vous souhaitez en savoir plus sur le phénomène des accaparements de terres dans le monde ?</label>
+                  <div class="input-group">
+                    <input type="email" name="email1" class="input-group-field" placeholder="Renseignez votre adresse email..." required />
+                    <div class="input-group-button">
+                      <input type="submit" class="button" value="Validé">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="columns small-12 medium-7 column-desc">
+              <h2 class="text-center">VRAIE SOLUTION</h2>
+              <p><strong><big>RESPECTER LES COMMUNAUTES ET LEUR DROIT A LA TERRE</big></strong></p>
+              <p>Anza, agricultrice, vit dans le district de Bagamoyo, en Tanzanie. Dans cette région, un des projets phares de la NASAN, une plantation de canne à sucre, implique la concession sur 99 ans d’environ 22000 hectares de terres à l’entreprise EcoEnergy. Selon nos collègues d’ActionAid qui ont enquêté sur place, les villageois-es n’ont pas eu la possibilité de choisir entre <br />être déplacé-e-s et conserver leurs terres. </p>
+              <p>Les femmes, particulièrement vulnérables aux accaparements de terres, sont pourtant les principaux fournisseurs de nourriture. Dans le district de Bagamoyo, les agricultrices se concentrent sur la culture pérenne, telles que les arbres fruitiers ou les noix de cajou, qui assurent la sécurité alimentaire de leurs familles.  </p>
+
+              <p>Face aux cultures de rente et d’exportation, ces plantations permettent aux agricultrices d’envisager un investissement à long terme et d’obtenir une source de revenu stable pour elles et leur famille.</p>
+
+              <p>Les petit-e-s paysan-ne-s sont les premiers producteurs et les premiers investisseurs dans l’agriculture ! Nous devons les soutenir en privilégiant un modèle agricole durable aux niveaux social et environnemental.</p>
+
+              <p><strong>L’accès à la terre et son contrôle, notamment pour les femmes et les populations autochtones, doivent être renforcés. L’accaparement des terres doit être stoppé !</strong></p>
+
+              <h3>Les petit-e-s paysan-ne-s nourrissent le monde, soutenons-les !</h3>
+
+              <div class="text-center">
+                <a href="https://soutenir.peuples-solidaires.org/b?cid=101" target="_blank" class="button">Je fais un don</a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+
+      <section class="section-case no-switch">
+        <section class="section-case-2 section-case-false">
+          <span class="anchor" id="agro-industrie"></span>
+          <div class="row">
+            <div class="columns">
+              <h3 class="title text-center">FAUSSE SOLUTION<br /><br />DÉVELOPPER L'AGRICULTURE INDUSTRIELLE POUR <br />LUTTER CONTRE LE CHANGEMENT CLIMATIQUE</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-6">
+    
+
+              <p>Le changement climatique est leur alibi, les avancées scientifiques et techniques leur paravent. Créée en 2014, « L’Alliance mondiale pour l’agriculture intelligente face au climat » (GACSA), un conglomérat d’États (dont la France) d’organisations internationales et d’entreprises, est un rideau de fumée qui abrite bien des convoitises.</p>
+
+              <p>Car les solutions proposées par la GACSA (OGM, agro carburants, séquestration  du carbone dans les terres cultivées) ne sont bonnes que pour le portefeuille de l’agro-industrie. Pas pour les populations, ni pour l’environnement.</p>
+
+              <h3>Exemple avec les agro carburants</h3>
+
+              <p>1,2 litre de pétrole est parfois nécessaire pour faire un litre d’agro carburant ! C’est le cas de 80% des agro carburants en Europe. <br /></p>
+
+              <a href="#" class="trigger-show-true">Voir la vraie solution </a>
+
+            </div>
+            <div class="columns small-12 medium-6">
+              <p><strong class="grey">65% des huiles végétales d’Europe sont destinés au marché des agro carburants. Cela favorise l’explosion des prix alimentaires.</strong><br /></p>
+
+              <p><strong class="grey">La production d’agro carburants a augmenté de 625%</strong> entre 2000 et 2010 ! Jusqu’à deux tiers des terres accaparées dans le monde durant cette période, serviraient à produire ces agro carburants.<br /><em>(source : Quelles solutions pour le climat ? Réseau Action Climat France)</em></p>
+
+              <p>Avec <strong class="grey">« l’agriculture climato compatible »</strong>, les décideurs prônent une fausse transformation du modèle de l’industrie agro alimentaire. Surtout, ils s’offrent un alibi pour ne pas soutenir l’agriculture familiale dont les profits, évidents pour la sécurité alimentaire des populations et pour l’environnement, ne sont pas financiers.</p>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="section-case-2 section-case-true">
+          <div class="sep">
+            <a href="#" class="trigger-move"><span></span></a>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-5">
+              <figure></figure>
+              <h3>“ J’ai semé environ deux  paniers de semences et certaines m’ont été données par d'autres agriculteurs.</h3>
+
+              <p class="quote">J’ai fini la récolte avec 7,5 paniers de semence. Le taux de rendement de chaque plant est exceptionnel !”<em>Daw Thi Thi Pyone</em></p>
+
+              <div class="form">
+                <form>
+                  <label>Savez-vous que dans des dizaines de pays, l’agro écologie est une nouvelle chance pour les petits paysans, mais aussi pour nous tous ? Pour plus d’informations, renseignez votre adresse email. </label>
+                  <div class="input-group">
+                    <input type="email" name="email1" class="input-group-field" placeholder="Renseignez votre adresse email..." required />
+                    <div class="input-group-button">
+                      <input type="submit" class="button" value="Validé">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="columns small-12 medium-7 column-desc">
+              <h2 class="text-center">VRAIE  SOLUTION</h2>
+              <p><strong><big>SOUTENIR L'AGRICULTURE FAMILIALE ET PAYSANNE QUI FOURNIT 80% DE LA NOURRITURE MONDIALE !</big></strong></p>
+              <p><strong>Un des projets que nous soutenons, au Myanmar, illustre ce double objectif :</p></strong>
+              <p>Daw Thi Thi Pyone, 38 ans, mère de deux enfants, vit à Ywar Thit Kyi un village du canton Seik Phyu au Myanmar. Il y a encore quelques années, elle n’était pas si enthousiaste. Car la vie est de plus en plus rude dans cette région du fait des changements climatiques et ce, alors que le climat était déjà très aride.</p>
+
+              <p>Mais depuis 2010, nos collègues d’ActionAid soutiennent un projet de subsistance et de réduction de la pauvreté mis en œuvre par les villageois.</p>
+
+              <p>Gestion des ressources en eau, lutte anti-incendie, agriculture durable, sélection des semences, fabrication d’engrais naturels : ce projet, où le rôle des femmes a été valorisé, a permis aux paysans de moins s’endetter, d’augmenter leurs revenus et d’investir dans le développement de leur communauté. </p>
+
+              <p>Plus de 28.000 personnes ont bénéficié de ce projet. Elles ont amélioré leur propre sécurité alimentaire et sont plus résistantes aux conditions météorologiques extrêmes.</p>
+
+              <p><strong>Nous soutenons d’autres projets similaires au Sénégal, au Ghana, au Bangladesh, au Sierra Leone, au Malawi, en Inde, au Vietnam, au Brésil ou encore au Kenya.</strong></p>
+
+              <p><h3>Les petit-e-s paysan-ne-s s’adaptent aux changements climatiques, soutenons-les ! </h3></p>
+
+              <div class="text-center">
+                <a href="https://soutenir.peuples-solidaires.org/b?cid=101" target="_blank" class="button">Je fais un don</a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+
+      <section class="section-case no-switch">
+        <section class="section-case-3 section-case-false">
+          <span class="anchor" id="pollution"></span>
+          <div class="row">
+            <div class="columns">
+              <h3 class="title text-center">FAUSSE SOLUTION<br /><br />REMETTRE EN CAUSE LA RESPONSABILITÉ <br />HISTORIQUE DES PAYS POLLUEURS</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-6">
+              <!--<p><strong>ILS ONT POLLUÉ ET REFUSENT DE PAYER !</strong></p>-->
+
+              <p>Tous les procédés sont bons pour ne pas assumer ses responsabilités ! Après avoir été climato-sceptiques, beaucoup rejettent aujourd’hui la faute sur les pays du Sud, accusés de ne rien faire et de prendre le risque de bloquer les négociations en rappelant sans cesse la responsabilité historique des pays riches.</p>
+              <h3>Et pourtant </h3>
+
+              <p><strong>La responsabilité historique des pays riches est pourtant une évidence !</strong></p>
+
+              <p>80% des gaz qui réchauffent notre atmosphère aujourd’hui ont été émis par les pays du Nord.</p>
+
+              <p><strong>Refuser d’admettre ses responsabilités : un alibi pour ne pas payer !</strong></p>
+
+              <p>Chaque pays devrait financer l’adaptation aux changements climatiques au regard de sa responsabilité historique dans la situation actuelle.</p>
+
+              <a href="#" class="trigger-show-true">Voir la vraie solution </a>
+
+            </div>
+            <div class="columns small-12 medium-6">
+              <p>On en est loin ! Les pays riches refusent d’admettre cette responsabilité historique dans les changements climatiques qui impactent en priorité les populations les plus vulnérables. Un rapport de Civil Society Review a calculé les parts équitables de chaque pays selon leur responsabilité historique, leur droit au développement, et leurs capacités. Cette étude montre que les pays riches font beaucoup moins que ce qui est requis par la science et l’équité, tandis que les pays du Sud relèvent le défi.</p>
+
+              <p><strong>Les grandes annonces ne font pas de gros chèques !</strong></p>
+
+              <p>Les promesses de financement des pays du Nord sont souvent floues, ou encore le résultat de montages financiers entre des aides au développement déjà existantes, des prêts, des allègements d’intérêts d’emprunt… </p>
+
+              <p>La vérité, c’est que les pays riches doivent passer de <strong class="grey">3 à 5 milliards de dollars</strong> par an actuellement, à <strong class="grey">50 milliards de dollars</strong> par an d’ici 2020 au minimum !</p>
+
+              <p><strong class="grey">La France doit multiplier par 30</strong> ses sommes provisionnées pour le financement de l’adaptation d’ici 2020 ! Les Etats-Unis, par 60 !<br><em>(Source : Mind the adaptation gap, Rapport Peuples Solidaires-ActionAid)</em></p>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="section-case-3 section-case-true">
+          <div class="sep">
+            <a href="#" class="trigger-move"><span></span></a>
+          </div>
+          <div class="row">
+            <div class="columns small-12 medium-5">
+              <figure></figure>
+              <!--<h3>“ l’agriculture conventionnelle a empoisonné les terres et les récoltes ne sont plus au rendez-vous .”</h3>
+
+              <p class="quote">Dans la région semi-aride de Tambacounda proche du Sahel, très exposée aux dérèglements du climat,<em> Néné Sy</em></p>-->
+              <h3>“ Les pays riches doivent aider les communautés qui vivent de l'agriculture à s'adapter pour obtenir la sécurité alimentaire ”</h3>
+
+              <p class="quote">Conclut Néné Sy, qui attend de la COP21, « des résolutions fortes »</p>
+
+              <div class="form">
+                <form>
+                  <label>Vous souhaitez en savoir plus sur l'urgence de débloquer des aides financières à l'adaptation des pays les plus impactés par les changements climatiques ?</label>
+                  <div class="input-group">
+                    <input type="email" name="email1" class="input-group-field" placeholder="Renseignez votre adresse email..." required />
+                    <div class="input-group-button">
+                      <input type="submit" class="button" value="Validé">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="columns small-12 medium-7 column-desc">
+
+              <h2 class="text-center">VRAIE SOLUTION </h2>
+              <p><strong><big>LES PAYS RICHES DOIVENT CONTRIBUER ÉQUITABLEMENT AU FINANCEMENT DE L'ADAPTATION AU CHANGEMENT CLIMATIQUE</big></strong></p>
+              
+              <p>Le témoignage de Néné Sy, agricultrice et militante sénégalaise, montre la nécessité et la réussite d’une agriculture durable et résiliente qui répond au triple objectif d’adaptation, de réduction des émissions et de lutte contre la pauvreté.</p>
+
+              <p><strong>Grâce aux conseils d’ActionAid Sénégal, elle a alors décidé d’investir dans l’agro écologie</strong>, de se passer d’intrants chimiques, d’utiliser des engrais naturels, de mieux préparer sa terre et d’utiliser des semences locales.</p>
+
+              <p>Ainsi, ces pratiques agricoles profitent aux populations locales tout en préservant les ressources naturelles, et « les paysan-ne-s ne s'endettent plus auprès des industriels locaux pour acheter des engrais chimiques et des semences hybrides. ».</p>
+
+              <p>Parallèlement, Néné Sy forme des femmes à identifier leurs facteurs de vulnérabilité face aux changements climatiques et à mettre en œuvre des solutions adaptés et pérennes, comme l’agro écologie.</p>
+
+              <!--<h3 class="nomargin">« Les pays riches doivent aider les communautés qui vivent de l'agriculture à s'adapter pour obtenir la sécurité alimentaire »</h3>
+              <p>conclut Néné Sy, qui attend de la COP21, « des résolutions fortes ».</p>-->
+
+              <h3 class="nomargin">« l’agriculture conventionnelle a empoisonné les terres et les récoltes ne sont plus au rendez-vous. »</h3>
+           
+
+              <div class="text-center">
+                <a href="https://soutenir.peuples-solidaires.org/b?cid=101" target="_blank" class="button">Je fais un don</a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+
+      <section class="section-dons">
+        <div class="row">
+          <div class="columns">
+            <h2 class="text-center">DOnner</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-12 medium-4 align-middle text-center">
+            <article class="bubble">
+              <h3>30€</h3>
+              <p><strong>Soit 10 € après réduction fiscale</strong></p>
+
+              <p>Vous nous aidez à mener des enquêtes sur les accaparements de terres, comme en Tanzanie ou au Sénégal, qui permettent aux populations impactées de défendre efficacement leur droit à la terre.</p>
+
+              <a href="https://soutenir.peuples-solidaires.org/b?cid=101&amount=3000" target="_blank" class="button">je fais un don</a>
+            </article>
+          </div>
+          <div class="columns small-12 medium-4 align-middle text-center">
+            <article class="bubble">
+              <h3>60€</h3>
+              <p><strong>Soit 20 € après réduction fiscale</strong></p>
+
+              <p>Vous aidez des paysans comme Daw Thi Thi Pyone au Myanmar à mettre sur pied dans leur communauté des banques de semences locales adaptées aux changements climatiques.</p>
+
+              <a href="https://soutenir.peuples-solidaires.org/b?cid=101&amount=6000" target="_blank" class="button">je fais un don</a>
+            </article>
+          </div>
+          <div class="columns small-12 medium-4 align-middle text-center">
+            <article class="bubble">
+              <h3>100€</h3>
+              <p><strong>Soit 34 € après réduction fiscale</strong></p>
+
+              <p>Vous permettez à des femmes comme Néné Sy de se former aux techniques agro-écologiques au sein de leur communauté par exemple au Cambodge, au Rwanda ou au Sénégal.</p>
+
+              <a href="https://soutenir.peuples-solidaires.org/b?cid=101&amount=10000" target="_blank" class="button">je fais un don</a>
+            </article>
+          </div>
+          <p class="credits">Photographe : Jane Hahn/ActionAid</p>
+        </div>
+      </section>
+
+      <section class="section-impot">
+        <div class="row">
+          <div class="columns small-12 medium-4 align-middle text-right">
+            <p><strong>PROFITEZ DE VOTRE<br />DÉDUCTION FISCALE POUR<br />AMPLIFIER VOTRE ACTION</strong></p>
+            <img src="img/arrow-left.svg" class="left" alt="" />
+            <img src="img/arrow-down-xs-b.svg" class="down" alt="" />
+          </div>
+          <div class="columns small-12 medium-3 medium-offset-1 align-middle">
+            <p><strong>Votre don de 60€<br />ne vous coûte <br />réellement que 20€ !</strong></p>
+            <img src="img/arrow-left.svg" class="left" alt="" />
+            <img src="img/arrow-down-xs-b.svg" class="down" alt="" />
+          </div>
+          <div class="columns small-12 medium-4 align-middle text-center">
+            <small>MONTANT<br>DÉDUCTIBLE</small>
+            <img src="img/camembert.png" alt="" />
+            <small>MONTANT <br />NON-DÉDUCTIBLE</small>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <footer class="main-footer">
+      <div class="row">
+        <div class="columns text-center">
+          <ul class="menu">
+            <li><a target="_blank" href="http://www.peuples-solidaires.org ">www.peuples-solidaires.org </a></li>
+            <li><a href="http://www.peuples-solidaires.org/contacts" target="_blank">Contact</a></li>
+            <li><a href="http://www.peuples-solidaires.org/mentions-legales" target="_blank">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="js/app.js"></script>
+  
+ <!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('7503-616-10-5856');/*]]>*/</script><noscript><a href="https://www.olark.com/site/7503-616-10-5856/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+  </body>
+</html>
