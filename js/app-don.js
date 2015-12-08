@@ -94,7 +94,6 @@ function getDonAmount() {
     }).done(function(data, status, jqXHR) {
         if (data[0] == '1') {
             var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
-            console.log(amount);
             $('.counter').html(amount ? amount : 0);
             $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 60000 : 0) + "%");
         }
