@@ -62,6 +62,11 @@ input:-moz-placeholder { color:$primary-color; }
 	display: block;
 	height: 58px;
 
+	@media screen and (max-width: 670px) {
+		width: 120px;
+		height: 28px;
+	}
+
 	@include breakpoint(small only) {
 		display: none;
 	}		
@@ -80,6 +85,14 @@ input:-moz-placeholder { color:$primary-color; }
 }
 .top-bar-right {
 	padding: 20px 0;
+
+	@media screen and (max-width: 670px) {
+		display: none;
+	}
+
+	@include breakpoint(small only) {
+		display: block;
+	}	
 
 	.button {
 		margin: 0;
@@ -173,6 +186,9 @@ input:-moz-placeholder { color:$primary-color; }
 	color: #FFF;
 	font-size: 20px;
 	line-height: 1em;
+
+	@media screen and (max-width: 670px) {
+	}
 
 	@include breakpoint(small only) { 
 		text-align: center;
@@ -345,6 +361,7 @@ section {
 	position: relative;
 	overflow: hidden;
 	padding: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.4); 
 	
 	@include breakpoint(small only) {
 		height: auto !important;
@@ -368,21 +385,25 @@ section {
 	.trigger-show-true {
 		text-transform: uppercase;
 		color: #FFF;
-		font-size: 12px;
+		font-size: 14px;
 		position: relative;
-		padding-right: 15px;
 		display: inline-block;
 		margin-top: 40px;
 
 		&:after {
 			content: '';
-			position: absolute;
+			/*position: absolute;
 			top: 50%;
 			right: 0;
-			margin-top: -6px;
+			margin-top: -6px;*/
+			display: inline-block;
+			margin-left: 5px;
+			vertical-align: middle;
 			width: 0;
 			height: 0;
 			border-style: solid;
+			position: relative;
+			top: -2px;
 			border-width: 6px 0 6px 6px;
 			border-color: transparent transparent transparent #FFF;
 			transition: all 0.3s ease;
@@ -483,6 +504,10 @@ section {
 		position: absolute;
 		left: -2px;
 		top: 0;
+		
+		@include breakpoint(small only) {
+			display: none;
+		}
 
 		a {
 			display: block;
@@ -503,6 +528,34 @@ section {
 				transform: rotate(-45deg);				
 			}
 
+			&:hover {
+				i {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			i {
+				font-style: normal;
+				color: #333;
+				font-size: 12px;
+				background: #FFF;
+				white-space: nowrap;
+				border-radius: 2px;
+				position: absolute;
+				top: 100%;
+				margin-top: 15px;
+				transform: translate(-50%, 0);
+				left: 50%;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: block;
+				padding: 5px 10px;
+				transition: all 0.3s ease; 
+				visibility: hidden;
+				opacity: 0;
+			}
+
 			span {
 				display: block;
 				height: 100%;
@@ -514,13 +567,13 @@ section {
 				&:before {
 					position: absolute;
 					top: 50%;
-					left: 2px;
-					margin-top: -6px;
+					left: 0;
+					margin-top: -10px;
 					content: '';
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 6px 6px 6px 0;
+					border-width: 10px 10px 10px 0;
 					border-color: transparent #e32a15 transparent transparent;
 					transition: all 0.3s ease;
 				}
@@ -529,12 +582,12 @@ section {
 					content: '';
 					position: absolute;
 					top: 50%;
-					right: 2px;
-					margin-top: -6px;
+					right: 0;
+					margin-top: -10px;
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 6px 0 6px 6px;
+					border-width: 10px 0 10px 10px;
 					border-color: transparent transparent transparent #e32a15;
 					transition: all 0.3s ease;
 				}
@@ -543,10 +596,10 @@ section {
 			&:hover {
 				span {
 					&:before {
-						transform: translate( 2px, 0);
+						transform: translate( -1px, 0);
 					}
 					&:after {
-						transform: translate(-2px, 0);
+						transform: translate( 1px, 0);
 					}
 				}
 			}
@@ -729,15 +782,28 @@ section {
 
 	.columns {
 		position: relative;
+		height: 230px;
 		
 		@include breakpoint(small only) {
 			text-align: center;
 			padding-bottom: 40px;
 			margin-bottom: 20px;
+			height: auto;
 		}			
 
 		&:first-child {
 			padding-right: 8.33333%;
+		}
+
+		.text-vcenter{
+			position: relative;
+			top: 50%;
+			transform: translate(0, -50%);
+		
+			@include breakpoint(small only) {
+				top: auto;
+				transform: none;
+			}
 		}
 	}
 
