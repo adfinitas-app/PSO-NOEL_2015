@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         $(this).next('.msg').fadeIn();
 
-        woopra.identfy({
+        woopra.identify({
            " email": $('form[data-id=' + index + '] input.input-group-field').val(),
         });
         woopra.track('inscription', {
