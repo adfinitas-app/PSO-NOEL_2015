@@ -13,15 +13,15 @@ $(document).ready(function() {
         $(this).next('.msg').fadeIn();
 
         woopra.track('inscription', {
-            category: "CHAMP_CAS"+index+"_FA15",
+            category: "CHAMP_CAS" + index + "_FA15",
             url:document.location.href,
             title: document.title,
             optin:"oui",
+            email: $('form[data-id=' + index + ']input.input-group-field').val(),
             'code-campagne':"FA15"
         });
         return false;
     });
-
 
     getDonAmount();
 
