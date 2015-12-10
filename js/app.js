@@ -17,7 +17,7 @@ $(document).ready(function() {
             url:document.location.href,
             title: document.title,
             optin:"oui",
-            email: $('form[data-id=' + index + ']input.input-group-field').val(),
+            "email": $('form[data-id=' + index + ']input.input-group-field').val(),
             'code-campagne':"FA15"
         });
         return false;
