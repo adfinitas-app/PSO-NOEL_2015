@@ -3786,6 +3786,10 @@ input:-moz-placeholder {
     .logo {
       display: none; } }
 
+.title-bar .button {
+  margin: 0;
+  float: right; }
+
 .top-bar {
   -o-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
@@ -3795,15 +3799,19 @@ input:-moz-placeholder {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px; }
+  .top-bar-left .menu {
+    padding: 10px 0; }
+    .top-bar-left .menu > li:first-child {
+      display: none; }
 
 .top-bar-right {
-  padding: 20px 0; }
+  padding: 20px 0;
+  /* @include breakpoint(small only) {
+		display: block;
+	}	 */ }
   @media screen and (max-width: 670px) {
     .top-bar-right {
       display: none; } }
-  @media screen and (min-width: 0em) and (max-width: 35.49306em) {
-    .top-bar-right {
-      display: block; } }
   .top-bar-right .button {
     margin: 0; }
 
