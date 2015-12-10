@@ -13,7 +13,7 @@ $(document).ready(function() {
         $(this).next('.msg').fadeIn();
 
         woopra.identify({
-           " email": $('form[data-id=' + index + '] input.input-group-field').val(),
+           " email": $('form[data-id=' + index + '] input.input-group-field').val()
         });
         woopra.track('inscription', {
             category: "CHAMP_CAS" + index + "_FA15",
