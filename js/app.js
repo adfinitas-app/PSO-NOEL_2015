@@ -6,6 +6,22 @@ $(document).ready(function() {
 		$('.header-page').css({ height : $(window).height() });
 	}).trigger('resize');
 
+    // FORM 
+    $('form').on('submit', function() {
+        var index = $(this).data('id');
+
+        $(this).next('.msg').fadeIn();
+
+        woopra.track('inscription', {
+            category: "CHAMP_CAS"+index+"_FA15",
+            url:document.location.href,
+            title: document.title,
+            optin:"oui",
+            'code-campagne':"FA15"
+        });
+        return false;
+    });
+
 
     getDonAmount();
 

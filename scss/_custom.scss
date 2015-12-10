@@ -89,11 +89,13 @@ input:-moz-placeholder { color:$primary-color; }
 	text-transform: uppercase;
 	font-size: 14px;
 
-	.menu {
-		padding: 10px 0;
-		& > li {
-			&:first-child {
-				display: none;
+	@include breakpoint(small only) {
+		.menu {
+			padding: 10px 0;
+			& > li {
+				&:first-child {
+					display: none;
+				}
 			}
 		}
 	}
@@ -648,6 +650,7 @@ section {
 		left: 0;
 		width: 100%;
 		padding-top: 140px;
+		position: relative;
 
 		label {
 			margin-bottom: 10px;
@@ -658,6 +661,15 @@ section {
 				padding:0.5em 0.3em;
 			}
 		}
+	}
+
+	.msg {
+		position: absolute;
+		font-size: 0.83333rem;
+		top: 100%;
+		margin-top: 5px;
+		color: #e01500;
+		display: none;
 	}
 
 	.quote {
