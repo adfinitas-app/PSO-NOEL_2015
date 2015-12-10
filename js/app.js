@@ -12,9 +12,7 @@ $(document).ready(function() {
 
         $(this).next('.msg').fadeIn();
 
-        woopra.identify({
-            email: $('form[data-id=' + index + '] input.input-group-field').val()
-        });
+        woopra.identify("email", $('form[data-id=' + index + '] input.input-group-field').val()).push();
         woopra.track('inscription', {
             category: "CHAMP_CAS" + index + "_FA15",
             url:document.location.href,
