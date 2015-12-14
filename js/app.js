@@ -17,10 +17,9 @@ function getDonAmount() {
         }
     });
 }
+getDonAmount();
 
 $(document).ready(function() {
-    
-    getDonAmount();
 
 	$(window).resize(function() {
 		$('.header-page').css({ height : $(window).height() });
