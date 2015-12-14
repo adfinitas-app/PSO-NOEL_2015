@@ -1,7 +1,27 @@
 $(document).foundation();
 
 
+function getDonAmount() {
+    $.ajax({
+        url: "https://peuples-solidaires.iraiser.eu/api/counter/get",
+        data: {
+            "user_api": "008",
+            "pwd_api": "4hCVhv2H",
+            "campaigns[]": [101, 102]
+        }
+    }).done(function(data, status, jqXHR) {
+        if (data[0] == '1') {
+            var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
+            $('.counter').html(amount ? amount : 0);
+            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 10000 : 0) + "%");
+        }
+    });
+}
+
 $(document).ready(function() {
+    
+    getDonAmount();
+
 	$(window).resize(function() {
 		$('.header-page').css({ height : $(window).height() });
 	}).trigger('resize');
@@ -23,8 +43,6 @@ $(document).ready(function() {
         });
         return false;
     });
-
-    getDonAmount();
 
     // SWITCH
     function killSwitch() {
@@ -99,20 +117,3 @@ $(document).ready(function() {
         });
     }
 })
-
-function getDonAmount() {
-    $.ajax({
-        url: "https://peuples-solidaires.iraiser.eu/api/counter/get",
-        data: {
-            "user_api": "008",
-            "pwd_api": "4hCVhv2H",
-            "campaigns[]": [101, 102]
-        }
-    }).done(function(data, status, jqXHR) {
-        if (data[0] == '1') {
-            var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
-            $('.counter').html(amount ? amount : 0);
-            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 10000 : 0) + "%");
-        }
-    });
-}
