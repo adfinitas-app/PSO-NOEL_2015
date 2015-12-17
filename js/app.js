@@ -1,7 +1,26 @@
 $(document).foundation();
 
 
+function getDonAmount() {
+    $.ajax({
+        url: "https://peuples-solidaires.iraiser.eu/api/counter/get",
+        data: {
+            "user_api": "008",
+            "pwd_api": "4hCVhv2H",
+            "campaigns[]": [101, 102]
+        }
+    }).done(function(data, status, jqXHR) {
+        if (data[0] == '1') {
+            var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
+            $('.counter').html(amount ? amount : 0);
+            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 10000 : 0) + "%");
+        }
+    });
+}
+getDonAmount();
+
 $(document).ready(function() {
+
 	$(window).resize(function() {
 		$('.header-page').css({ height : $(window).height() });
 	}).trigger('resize');
@@ -12,18 +31,17 @@ $(document).ready(function() {
 
         $(this).next('.msg').fadeIn();
 
+        woopra.identify("email", $('form[data-id=' + index + '] input.input-group-field').val()).push();
         woopra.track('inscription', {
-            category: "CHAMP_CAS"+index+"_FA15",
+            category: "CHAMP_CAS" + index + "_FA15",
             url:document.location.href,
             title: document.title,
             optin:"oui",
+            "email": $('form[data-id=' + index + '] input.input-group-field').val(),
             'code-campagne':"FA15"
         });
         return false;
     });
-
-
-    getDonAmount();
 
     // SWITCH
     function killSwitch() {
@@ -103,20 +121,3 @@ $(document).ready(function() {
         });
     }
 })
-
-function getDonAmount() {
-    $.ajax({
-        url: "https://peuples-solidaires.iraiser.eu/api/counter/get",
-        data: {
-            "user_api": "008",
-            "pwd_api": "4hCVhv2H",
-            "campaigns[]": [101]
-        }
-    }).done(function(data, status, jqXHR) {
-        if (data[0] == '1') {
-            var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
-            $('.counter').html(amount ? amount : 0);
-            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 6000 : 0) + "%");
-        }
-    });
-}
