@@ -64,13 +64,18 @@ $(document).ready(function() {
             TweenMax.to($parent.find('.section-case-true'), 0.3, { x : 0 });
         });
 
+        var eventStart = typeof window.ontouchstart !== 'undefined' ? 'touchstart' : 'mousedown';
+
         $('.section-case').find('.trigger-move').on('click', function(e) {
             e.preventDefault();
-        }).on('mousedown touchstart', function(e) {
+        }).on(eventStart, function(e) {
             e.preventDefault();
+            e.stopPropagation();
             var $parent = $(this).parents('.section-case-true');
+            var eventMove = (e.type.toLowerCase() === 'mousedown') ? 'mousemove' : 'touchmove';
+            var eventEnd = (e.type.toLowerCase() === 'mousedown') ? 'mouseup' : 'touchend';
 
-            $(window).on('mousemove touchmove', function(e) {
+            $('body').on(eventMove, function(e) {
                 e.preventDefault();
 
                 var pageX = (e.type.toLowerCase() === 'mousemove')
@@ -79,7 +84,7 @@ $(document).ready(function() {
                 TweenMax.set($parent, { x : pageX });
             });
 
-            $(window).on('mouseup touchend', function(e) {
+            $('body').on(eventEnd, function(e) {
                 e.preventDefault();
 
                 var pageX = (e.type.toLowerCase() === 'mouseup')
@@ -93,7 +98,7 @@ $(document).ready(function() {
                     TweenMax.to($parent, 0.3, { x : 0 });
                 }
 
-                $(window).off('mousemove').off('mouseup');
+                $('body').off(eventMove).off(eventEnd);
             });
         });
     }
