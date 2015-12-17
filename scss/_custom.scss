@@ -439,6 +439,15 @@ section {
 
 	.title {
 		margin-bottom: 40px;
+
+		span {
+			padding-top: 20px;
+			display: block;
+			font-size: 18px;
+			line-height: 1.6;
+			font-family: $body-font-family;
+			font-weight: 700;
+		}
 	}
 
 	h3 {
