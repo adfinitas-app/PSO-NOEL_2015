@@ -13,7 +13,7 @@ function getDonAmount() {
         if (data[0] == '1') {
             var amount = data.slice(data.indexOf('|') + 1, data.length - 2);
             $('.counter').html(amount ? amount : 0);
-            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 10000 : 0) + "%");
+            $('.progressbar > .bar').css("width", (amount > 0 ? amount * 100 / 25000 : 0) + "%");
         }
     });
 }
